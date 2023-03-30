@@ -2,18 +2,28 @@
 <template>
   <div class="home">
     <h1>About</h1>
-    <button class="btn btn-outline-secondary"
-    @click="storeCounter.increaseCount"
+    <button
+      class="btn btn-outline-secondary"
+      @click="storeCounter.increaseCount"
     >
-      <Counter/>
+      <span class="fw-bold text-warning fs-2">
+        {{ storeCounter.count }}
+      </span>
     </button>
   </div>
 </template>
 
-<script setup>
+<script>
 import Counter from "@/components/Counter.vue";
 import { useCounterStore } from "@/stores/counter";
 const storeCounter = useCounterStore();
+export default {
+  data() {
+    return {
+      storeCounter,
+    };
+  },
+};
 </script>
 
 

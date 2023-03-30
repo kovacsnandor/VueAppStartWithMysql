@@ -28,9 +28,9 @@ const router = createRouter({
       component: () => import('../views/Count2View.vue')
     },
     {
-      path: '/login',
-      name: 'login',
-      component: () => import('../views/LoginView.vue')
+      path: '/:pathMatch(.*)*',
+      name: 'PageNotFound',
+      component: () => import('../views/404View.vue')
     }
   ]
 })

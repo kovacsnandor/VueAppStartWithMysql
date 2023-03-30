@@ -1,12 +1,13 @@
+
 <template>
   <div>
-    <h1>Fej</h1>
+    <h1>404</h1>
   </div>
 </template>
 
-<script>
-export default {};
+<script setup>
 </script>
+
 
 <style>
 </style>
